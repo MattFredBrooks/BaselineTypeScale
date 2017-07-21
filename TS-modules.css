@@ -15,7 +15,7 @@ body{
   padding: 0px 3rem;
   font-family: sans-serif;
   /* Demonstrate the vertical rhythm at 16px*/
-  background-image: linear-gradient(#eee 1px, transparent 1px);
+  background-image: linear-gradient(grey 1px, transparent 1px);
   background-size: 100% 16px;
 }
 
