@@ -79,8 +79,33 @@
           </div>
       </div>
     <script>
-      var x = $(".mt-1").offset();
-      alert("Top: " + x.top + " Left: " + x.left);
+      var xh1 = $(".mt-1 h1").offset();
+      var xh2 = $(".mt-1 h2").offset();
+      var xh3 = $(".mt-1 h3").offset();
+      //alert("Top: " + x.top + " Left: " + x.left + " Modulus: " + x.top%16);
+      var mh1 = xh1.top%16;
+      var mh2 = xh2.top%16;
+      var mh3 = xh3.top%16;
+
+      // var mh1b = xh1.bottom%16;
+      // var mh2b = xh2.bottom%16;
+      // var mh3b = xh3.bottom%16;
+
+      if (mh1 != 0)
+      {
+        $(".mt-1 h1").css("color", "#ff0000");
+        $(".mt-1 h1").css("outline-color", "#ff0000");
+      }
+      else if (mh2 != 0) {
+        $(".mt-1 h2").css("color", "#ff0000");
+        $(".mt-1 h2").css("outline-color", "#ff0000");
+      }
+      else if (mh3 != 0) {
+        $(".mt-1 h3").css("color", "#ff0000");
+        $(".mt-1 h3").css("outline-color", "#ff0000");
+      }
+      var h = $(".mt-1 h1" ).height();
+      alert(h);
     </script>
     </body>
 </html>
