@@ -49,63 +49,50 @@
           <p>Habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
           </div>
       </div> -->
-      <div id="hasheadings-isbaselined">
+
+      <div id="has-headings-isbaselined">
           <!-- <h4 class="mt-title">Baselined</h4> -->
-          <div class="module-text mt-1">
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <p>Paragraph line-height 16px.</p>
+          <div class="module-text mt-1 column">
+          <h1>H1</h1>
+          <h2>H2</h2>
+          <h3>H3</h3>
+          <h4>H4</h4>
+          <p>Paragraph line-height 16px</p>
           <p>Habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
           </div>
 
-          <div class="module-text mt-2">
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <p>Paragraph line-height 1.5.</p>
+          <div class="module-text mt-2 column">
+          <h1>H1</h1>
+          <h2>H2</h2>
+          <h3>H3</h3>
+          <h4>H4</h4>
+          <p>Paragraph line-height 1.5</p>
           <p>Habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
           </div>
 
-          <div class="module-text mt-3">
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <p>Paragraph line-height 32px.</p>
+          <div class="module-text mt-3 column">
+          <h1>H1</h1>
+          <h2>H2</h2>
+          <h3>H3</h3>
+          <h4>H4</h4>
+          <p>Paragraph line-height 32px</p>
           <p>Habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
           </div>
       </div>
     <script>
-      var xh1 = $(".mt-1 h1").offset();
-      var xh2 = $(".mt-1 h2").offset();
-      var xh3 = $(".mt-1 h3").offset();
-      //alert("Top: " + x.top + " Left: " + x.left + " Modulus: " + x.top%16);
-      var mh1 = xh1.top%16;
-      var mh2 = xh2.top%16;
-      var mh3 = xh3.top%16;
-
-      // var mh1b = xh1.bottom%16;
-      // var mh2b = xh2.bottom%16;
-      // var mh3b = xh3.bottom%16;
-
-      if (mh1 != 0)
-      {
-        $(".mt-1 h1").css("color", "#ff0000");
-        $(".mt-1 h1").css("outline-color", "#ff0000");
-      }
-      else if (mh2 != 0) {
-        $(".mt-1 h2").css("color", "#ff0000");
-        $(".mt-1 h2").css("outline-color", "#ff0000");
-      }
-      else if (mh3 != 0) {
-        $(".mt-1 h3").css("color", "#ff0000");
-        $(".mt-1 h3").css("outline-color", "#ff0000");
-      }
-      var h = $(".mt-1 h1" ).height();
-      alert(h);
+      $.each($('.column *'), function(index, value) {
+        $(this).append(" - h:" + $(this).outerHeight(true))
+      })
     </script>
+
+    <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js"></script>
+    <script>
+        //draws vertical grid lines
+        window.onload = function() {
+            baseliner = new Baseliner({'gridColor': 'red', 'gridHeight': 16, 'gridOffset': 4});
+        }
+    </script>
+
+
     </body>
 </html>
