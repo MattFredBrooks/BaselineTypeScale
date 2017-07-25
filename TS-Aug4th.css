@@ -66,5 +66,5 @@ small, .font_small {font-size: 0.707em;}
   margin-bottom: 15px;
 }
 .column:nth-child(3) p{
-  margin-bottom: 0px;
+  margin-bottom: 1rem;
 }
