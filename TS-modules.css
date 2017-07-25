@@ -13,78 +13,46 @@ body{
   /*max-width:1500px;*/
   /*margin:auto;*/
   /*padding: 0px 3rem;*/
-  font-family: sans-serif;
-  /* Demonstrate the vertical rhythm at 16px*/
-  /*background-image: linear-gradient(grey 1px, transparent 1px);
-  background-size: 100% 15px;
-  background-position-y: 1px;*/
+  font-family: 'Segoe UI';
 }
 
-/* Display separate modules of text for comparison */
-.module-text {
+.column {
   float:left;
   width:30%;
   margin-left: 1em;
   margin-top: 1em;
 }
 
-.mt-title {
+.colours-on .column * {
+  background-color: lightpink;
+  outline: dashed 1px #333;
+}
+
+.colours-on .column {
+  background-color: lightblue;
+}
+
+/*.mt-title {
   clear:both;
   float:left;
-}
+}*/
 
 /* Clear modules row from mt-title */
-.mt-1 {
+/*.column:nth-child(1) {
   clear:left;
-}
+}*/
 
-.mt-1 h1, .mt-2 h1, .mt-3 h1 {
-  background-color: rgba(255,0,255, 0.5);
-  outline: dashed 1px #333;
-
-}
-
-.mt-1 h2, .mt-2 h2, .mt-3 h2 {
-  background-color: rgba(255,255,0, 0.5);
-  outline: dashed 1px #333;
-
-}
-
-.mt-1 h3, .mt-2 h3, .mt-3 h3 {
-  background-color: rgba(255,255,0, 0.5);
-  outline: dashed 1px #333;
-
-}
-
-.mt-1 h4, .mt-2 h4, .mt-3 h4 {
-  background-color: rgba(255,255,0, 0.5);
-  outline: dashed 1px #333;
-
-}
-
-.mt-1 p, .mt-2 p, .mt-3 p {
-  background-color: rgba(224,255,255, 0.5);
-  outline: dashed 1px #333;
-
-}
-
-.mt-1 p{
+.column:nth-child(1) p {
   /*set to baseline*/
   line-height:16px;
 }
 
-.mt-2 p{
+.column:nth-child(2) p {
   /*set to baseline*/
   line-height:1.5;
 }
 
-.mt-3 p{
+.column:nth-child(3) p {
   /*set to baseline*/
   line-height:32px;
 }
-
-/* Switch colours off */
-/*.mt-1 p, .mt-2 p, .mt-3 p, .mt-1 h1, .mt-2 h1, .mt-3 h1, .mt-1 h2, .mt-2 h2, .mt-3 h2, .mt-1 h3, .mt-2 h3, .mt-3 h3, .mt-1 h4, .mt-2 h4, .mt-3 h4 {
-  background-color: rgba(0,0,0, 0);
-  outline: dashed 0px orange;
-}*/
