@@ -31,16 +31,6 @@ body{
   background-color: lightblue;
 }
 
-/*.mt-title {
-  clear:both;
-  float:left;
-}*/
-
-/* Clear modules row from mt-title */
-/*.column:nth-child(1) {
-  clear:left;
-}*/
-
 .column:nth-child(1) p {
   /*set to baseline*/
   line-height:16px;
